@@ -1,3 +1,12 @@
+/**
+ * Pebble Universal Controller
+ *
+ * Progress animations
+ *
+ * Copyright 2016 - Parakoopa <parakoopa@live.de>
+ * Licensed under MIT. See LICENSE file for details.
+ */
+
 var settings = require('app.settings');
 var UI = require('ui');
 

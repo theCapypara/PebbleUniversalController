@@ -1,0 +1,60 @@
+{
+  "name": "Test",
+  "secret": "CHANGE_ME",
+  "items": [
+    {
+      "title": "Silent",
+      "action": "https://raw.githubusercontent.com/Parakoopa/PebbleUniversalController/master/server_examples/test1_responses/silent.json",
+      "actionType": "silent"
+    },
+    {
+      "title": "Status",
+      "subtitle": "Success",
+      "action": "https://raw.githubusercontent.com/Parakoopa/PebbleUniversalController/master/server_examples/test1_responses/status.json",
+      "actionType": "status"
+    },
+    {
+      "title": "Status",
+      "subtitle": "Fail",
+      "action": "https://raw.githubusercontent.com/Parakoopa/PebbleUniversalController/master/server_examples/test1_responses/status_fail.json",
+      "actionType": "status"
+    },
+    {
+      "title": "Content",
+      "subtitle": "Success",
+      "action": "https://raw.githubusercontent.com/Parakoopa/PebbleUniversalController/master/server_examples/test1_responses/content.json",
+      "actionType": "content"
+    },
+    {
+      "title": "Content",
+      "subtitle": "Fail",
+      "action": "https://raw.githubusercontent.com/Parakoopa/PebbleUniversalController/master/server_examples/test1_responses/content_fail.json",
+      "actionType": "content"
+    },
+    {
+      "title": "MENU",
+      "subtitle": "Test",
+      "icon": "images/item_icon.png",
+      "submenu": [
+        {
+          "title": "Test 3",
+          "action": "http://test",
+          "actionType": "silent"
+        },
+        {
+          "title": "Test 4",
+          "action": "http://test",
+          "actionType": "submenu",
+          "submenu": [
+            {
+              "title": "Test 5",
+              "action": "http://test",
+              "actionType": "silent"
+            }
+          ]
+        }
+      ],
+      "actionType": "submenu"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel='stylesheet' type='text/css' href='bower_components/Slate/dist/css/slate.min.css'>
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
+</head>
+<body>
+  <div class='item-container'>
+    <h1 class='title'>Universal Controller</h1>
+  </div>
+
+
+  <div class='item-container'>
+    <div class='item-container-header'>Servers</div>
+    <div class="item-container-content">
+      <div class="item-dynamic-list" id="i_server">
+      </div>
+    </div>
+    <div class='item-container-footer'>
+      List of servers to receive commands from.<br>
+      For more information on how to serve commands, see
+      <a href="https://github.com/Parakoopa/PebbleUniversalController">here</a>.
+    </div>
+  </div>
+
+  <div class='item-container'>
+    <div class='item-container-header'>Secret passphrase</div>
+    <div class='item-container-content'>
+      <label class='item'>
+        <div class="item-input-wrapper">
+          <input id='i_secret' type='text' class='item-input setting' value='000000'>
+        </div>
+      </label>
+    </div>
+    <div class='item-container-footer'>
+      All servers need to send the secret passphrase, otherwise we will ignore them.
+    </div>
+  </div>
+
+  <div class='item-container'>
+    <div class='item-container-header'>Timeout</div>
+    <div class='item-container-content'>
+      <label class='item'>
+        <div class="item-input-wrapper">
+          <input id='i_timeout' type='text' class='item-input setting' value='000000'>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class='item-container'>
+    <div class='item-container-header'>Skin</div>
+    <div class='item-container-content'>
+      <label class='item'>
+        Text Color
+        <input id='i_fgColor' type='text' class='item-color item-color-sunny setting' value='#000000'>
+      </label>
+      <label class='item'>
+        Background Color
+        <input id='i_bgColor' type='text' class='item-color item-color-sunny setting' value='#000000'>
+      </label>
+    </div>
+  </div>
+
+  <div class='item-container'>
+    <div class='button-container'>
+      <input id='submitButton' type='button' class='item-button' value='SAVE'>
+    </div>
+  </div>
+
+  <script src='bower_components/Slate/dist/js/slate.min.js'></script>
+  <script src='js/main.js'></script>
+</body>
+</html>

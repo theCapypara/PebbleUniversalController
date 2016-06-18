@@ -1,6 +1,15 @@
+/**
+ * Pebble Universal Controller
+ *
+ * Settings storage
+ *
+ * Copyright 2016 - Parakoopa <parakoopa@live.de>
+ * Licensed under MIT. See LICENSE file for details.
+ */
+
 var settings = {
   debug: false,
-  confURL: 'http://parakoopa.de/pebble/uc.html',
+  confURL: 'http://parakoopa.de/pebble/uc',
   defaults: {
     timeout: 2000,
     servers: [],
@@ -31,7 +40,26 @@ var settings = {
     }));
   },
   saveConfiguration: function(e) {
-    // TODO
+    try {
+      var configData = JSON.parse(decodeURIComponent(e.response));
+      if (configData.timeout) {
+        settings.set('timeout', configData.timeout)
+      }
+      if (configData.secret) {
+        settings.set('secret', configData.secret)
+      }
+      if (configData.fgColor) {
+        settings.set('fgColor', configData.fgColor)
+      }
+      if (configData.bgColor) {
+        settings.set('bgColor', configData.bgColor)
+      }
+      if (configData.servers) {
+        settings.set('servers', configData.servers.split('::'))
+      }
+    } catch(ex) {
+      console.log("could not save")
+    }
   },
   get: function(name) {
     return JSON.parse(localStorage.getItem(name));

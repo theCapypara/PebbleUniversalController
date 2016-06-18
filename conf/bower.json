@@ -1,0 +1,11 @@
+{
+  "name": "pebble-universalcontroller-config",
+  "version": "1.0.0",
+  "authors": [
+    "Parakoopa <parakoopa@live.de>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "Slate": "pebble-slate#^0.0.3"
+  }
+}
